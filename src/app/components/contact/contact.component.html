@@ -1,0 +1,73 @@
+<header class=" headerColor2 ">
+    <div class="container contentHeader">
+        <div class="site-header">
+            <nav class="nav">
+                <a [routerLink]="['/nosotros']" [routerLinkActive]="['actived']">Nosotros</a>
+                <a [routerLink]="['/testimoniales']" [routerLinkActive]="['actived']">Testimoniales</a>
+                <a [routerLink]="['/contacto']" [routerLinkActive]="['actived']">Contacto</a>
+            </nav>
+
+            <div class="login">
+                <a href="#"><img src="../../../assets/img/iniciar-sesion (1).png" alt=""></a>
+                <p>Registrarse</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<h1 class="fw-300 center-text">Contacto</h1>
+<img src="../../../assets/img/contacto2.jpg" alt="Imagen Principal">
+
+<main class="container section content-center">
+    <h2 class="fw-300 center-text">Llenar Formulario de contacto</h2>
+
+    <form class="contact">
+        <fieldset>
+            <legend>Información Personal</legend>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Tu Nombre">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Tu Correo Electornico" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" placeholder="Tu Teléfono" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" cols="30" rows="10"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contacto</legend>
+
+            <p>Como desea ser contactado:</p>
+
+            <div class="form-contact">
+                <label for="telefono">Teléfono</label>
+                <input type="radio" id="telefono" name="contacto">
+
+                <label for="correo"> E-mail</label>
+                <input type="radio" id="correo" name="contacto">
+            </div>
+            <p>Si eligió Teléfono, elija la fecha y la hora</p>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha">
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" min="9:00" max="18:00">
+        </fieldset>
+        <input type="submit" value="Enviar" class="button button-green">
+    </form>
+</main>
+
+<footer class="footer section ">
+    <div class="container container-footer ">
+        <nav class="nav">
+            <a [routerLink]="['/nosotros']" [routerLinkActive]="['actived']">Nosotros</a>
+            <a [routerLink]="['/testimoniales']" [routerLinkActive]="['actived']">Testimoniales</a>
+            <a [routerLink]="['/contacto']" [routerLinkActive]="['actived']">Contacto</a>
+        </nav>
+        <p class="copyright ">Todos los Derechso Reservados 2020 &copy;</p>
+    </div>
+</footer>

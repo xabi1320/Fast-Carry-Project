@@ -56,6 +56,10 @@
     .center-text {
         text-align: center;
     }
+    
+    .content-center {
+        max-width: 800px;
+    }
     /*Buttons*/
     
     .button {
@@ -101,6 +105,11 @@
     /*Header*/
     
     .headerColor::after {
+        background-color: rgba(55, 55, 55, 10);
+        padding: 1rem 0 3rem 0;
+    }
+    
+    .headerColor2 {
         background-color: rgba(55, 55, 55, 10);
         padding: 1rem 0 3rem 0;
     }
@@ -196,18 +205,26 @@
     }
     /*Testimoniales*/
     
-    .containerTes {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    @media (min-width: 768px) {
+        .containerTes {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
     }
     
     .tes {
         width: 100%;
         text-align: center;
-        margin-right: 2rem;
+        margin-bottom: 4rem;
         border: 1px solid #b5b5b5;
         background-color: rgba(189, 122, 35, 0.2)
+    }
+    
+    @media (min-width: 768px) {
+        .tes {
+            flex: 0 0 calc(33.3% - 1rem);
+        }
     }
     
     .tes img {
@@ -220,12 +237,12 @@
         margin: 0;
         padding: 0;
     }
-    
+    /*
     .testi blockquote {
         height: 100%;
         margin: 0!important;
         padding: 1rem;
-    }
+    }*/
     
     .testi p {
         text-transform: uppercase;
@@ -256,6 +273,7 @@
         background-color: #333333;
         margin: 0;
         margin-top: 5rem;
+        padding: 1rem 0 3rem 0;
     }
     
     .container-footer {
@@ -266,4 +284,77 @@
     
     .container-footer p {
         color: #ffffff;
+    }
+    /**INTERNAS**/
+    /*Nosotros*/
+    
+    @media (min-width: 768px) {
+        .content-nosotros {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 2rem;
+        }
+    }
+    
+    .text-nosotros blockquote {
+        font-weight: 900;
+        font-size: 2rem;
+        margin: 0;
+        padding: 0 0 3rem 0;
+    }
+    
+    .image img {
+        width: 100rem;
+        height: 60rem;
+    }
+    /*Contact*/
+    
+    .contact p {
+        font-size: 1.6rem;
+        color: #4f4f4f;
+        margin: 2rem 0 0 0;
+    }
+    
+    legend {
+        font-size: 2.4rem;
+        color: #4f4f4f;
+    }
+    
+    label {
+        display: block;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    
+    input:not([type="submit"]),
+    textarea,
+    select {
+        padding: 1rem;
+        display: block;
+        width: 100%;
+        background-color: #e1e1e1;
+        margin-bottom: 2rem;
+        border: none;
+        border-radius: 1rem;
+    }
+    
+    input[type="radio"] {
+        width: auto;
+        margin: 0;
+    }
+    
+    select {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+    
+    textarea {
+        height: 20rem;
+    }
+    
+    .form-contact {
+        max-width: 30rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
