@@ -1,0 +1,51 @@
+<section class="contentSignUp" *ngIf='user'>
+    <div class="containerSignUp">
+        <main class="container section content-center">
+            <h2 class="fw-300 center-text">Llenar Formulario de registro</h2>
+
+            <form class="contact" #signUpForm='ngForm' (ngSubmit)='onSubmit(signUpForm)'>
+                <fieldset>
+                    <legend>Información Personal</legend>
+
+                    <label for="name">Nombre:</label>
+                    <input type="text" name="name" #name="ngModel" [(ngModel)]="user.name" placeholder="Tu Nombre" required autofocus>
+                    <span class="formError" *ngIf='name.touched && !name.valid'>
+                        *El nombre es obligatorio
+                    </span>
+
+                    <label for="lastName">Apellidos:</label>
+                    <input type="text" name="lastName" #lastName="ngModel" [(ngModel)]="user.lastName" placeholder="Tus Apellidos" required>
+                    <span class="formError" *ngIf='lastName.touched && !lastName.valid'>
+                        *Los Apellidos son obligatorios
+                    </span>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" #email="ngModel" [(ngModel)]="user.email" placeholder="Tu Correo Electornico" required>
+                    <span class="formError" *ngIf='email.touched && !email.valid'>
+                        *El email es obligatorio
+                    </span>
+
+                    <label for="country">País:</label>
+                    <input type="text" name="country" #country="ngModel" [(ngModel)]="user.country" placeholder="Tu País" required>
+                    <span class="formError" *ngIf='country.touched && !country.valid'>
+                        *El país es obligatorio
+                    </span>
+
+                    <label for="address">Dirección:</label>
+                    <input type="text" name="address" #address="ngModel" [(ngModel)]="user.address" placeholder="Tu Dirección" required>
+                    <span class="formError" *ngIf='address.touched && !address.valid'>
+                        *La Dirección es obligatoria
+                    </span>
+
+                    <label for="password">Contraseña:</label>
+                    <input type="password" name="password" #password="ngModel" [(ngModel)]="user.password" placeholder="Ingrese una contraseña..." required>
+                    <span class="formError" *ngIf='password.touched && !password.valid'>
+                        *La contraseña es obligatoria
+                    </span>
+                </fieldset>
+                <input type="submit" value="Registrarme" class="button button-green" [disabled]='!signUpForm.form.valid'>
+            </form>
+        </main>
+    </div>
+
+</section>

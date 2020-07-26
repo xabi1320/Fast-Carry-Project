@@ -1,0 +1,16 @@
+<section class="content">
+    <div class="containerLogin">
+        <div class="formContainer">
+            <h2>Bienvenido(a)</h2>
+            <form (submit)="signIn()">
+                <input type="email" name="email" placeholder="Correo Electronico">
+                <input type="password" name="password" placeholder="Contraseña">
+                <input type="submit" value="Inciar Sesión">
+            </form>
+        </div>
+        <div class="signInContainer">
+            <p>¿No tienes Cuenta?</p>
+            <a [routerLink]="['/signUp']" [routerLinkActive]="['actived']">Crear Cuenta</a>
+        </div>
+    </div>
+</section>

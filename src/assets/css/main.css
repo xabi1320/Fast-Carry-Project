@@ -358,3 +358,111 @@
         justify-content: space-between;
         align-items: center;
     }
+    /*COMPONENTS*/
+    /*Sign In*/
+    
+    .content {
+        background-image: url(../img/contacto3.jpg);
+        background-position: center center;
+        background-size: cover;
+        height: 100vh;
+        min-height: 60rem;
+        display: flex;
+    }
+    
+    .containerLogin {
+        width: 25%;
+        margin: 0 auto;
+        margin-top: 25vh;
+        max-height: 40rem;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 40px black;
+        background: rgba(66, 56, 56, 0.5);
+        display: block;
+    }
+    
+    .formContainer {
+        padding: 1rem;
+        display: block;
+        text-align: center;
+    }
+    
+    .formContainer h2 {
+        text-transform: uppercase;
+        color: #ffc55b;
+        line-height: 1;
+    }
+    
+    .formContainer input[type='submit'] {
+        width: 75%;
+        height: 4rem;
+        text-transform: uppercase;
+        background: #e08709;
+        border: none;
+        border-radius: 1rem;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    
+    .formContainer input[type='submit']:hover {
+        background-color: rgba(224, 135, 9, 0.9);
+    }
+    
+    .signInContainer {
+        display: block;
+        text-align: center;
+    }
+    
+    .signInContainer p {
+        text-transform: uppercase;
+        color: #ffc55b;
+        font-weight: bold;
+        font-size: 1.9rem;
+        margin: 0;
+    }
+    
+    .signInContainer a {
+        padding: .5rem;
+        text-transform: uppercase;
+        background: #71b100;
+        border: none;
+        border-radius: 1rem;
+        color: #ffffff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .signInContainer a:hover {
+        background-color: rgba(113, 177, 0, 0.9);
+    }
+    /*Sign Up*/
+    
+    .contentSignUp {
+        background-image: url(../img/contacto.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+    }
+    
+    .containerSignUp {
+        width: 40%;
+        margin: 0 auto;
+        margin-top: 6vh;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 40px black;
+        background: rgba(66, 56, 56, 0.4);
+        display: block;
+    }
+    
+    form input[disabled] {
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+    
+    .formError {
+        color: red;
+        background-color: rgba(66, 56, 56, 0.9);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
