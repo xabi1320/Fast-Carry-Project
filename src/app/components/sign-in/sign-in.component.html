@@ -2,9 +2,9 @@
     <div class="containerLogin">
         <div class="formContainer">
             <h2>Bienvenido(a)</h2>
-            <form (submit)="signIn()">
-                <input type="email" name="email" placeholder="Correo Electronico">
-                <input type="password" name="password" placeholder="Contraseña">
+            <form #signInForm='ngForm' (submit)="signIn()">
+                <input type="email" #email="ngModel" [(ngModel)]="user.email" name="email" placeholder="Correo Electronico">
+                <input type="password" #password="ngModel" [(ngModel)]="user.password" name="password" placeholder="Contraseña">
                 <input type="submit" value="Inciar Sesión">
             </form>
         </div>

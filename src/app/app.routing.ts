@@ -1,5 +1,6 @@
 import { ModuleWithProviders, Component } from '@angular/core'
 import { Routes, RouterModule } from '@angular/router'
+import { AuthGuard } from './auth.guard';
 
 import { AboutComponent } from './components/about/about.component'
 import { ContactComponent } from './components/contact/contact.component'
@@ -16,8 +17,8 @@ const appRoutes: Routes = [
     {path: 'contacto', component: ContactComponent},
     {path: 'signIn', component: SignInComponent},
     {path: 'signUp', component: SignUpComponent},
-    {path: 'profile', component: ProfileComponent}
+    {path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]}
 ]
 
 export const appRoutingProviders: any[] = []
-export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes)
+export const routing: ModuleWithProviders<any> = RouterModule.forRoot(appRoutes)

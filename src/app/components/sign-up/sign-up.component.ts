@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../../models/user'
 import { UserService } from '../../services/user.service'
 import { Global } from '../../services/global'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up',
@@ -16,7 +17,8 @@ export class SignUpComponent implements OnInit {
 
 
       constructor(
-          private _userService: UserService
+          private _userService: UserService,
+          private _router: Router 
       ) {
           this.url = Global.url
           this.user = new User('', '', '', '', '', '', '')
@@ -30,7 +32,8 @@ export class SignUpComponent implements OnInit {
           this._userService.signUpUser(this.user).subscribe(
               response =>{
                   console.log(response)
-                  this.signUpUser = response.user
+                  localStorage.setItem('token', response.token)
+                  this._router.navigate(['/profile'])
                   form.reset()
               },
               error =>{
